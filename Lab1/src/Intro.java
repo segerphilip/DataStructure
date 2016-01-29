@@ -11,8 +11,8 @@ public class Intro {
         String name = scan.nextLine();
         System.out.println("What is your favorite color? ");
         String color = scan.nextLine();
-        System.out.println("What is the speed of an unladen swallow? ");
-        String speed = scan.nextLine();
+        System.out.println("What is the land speed of an unladen swallow? ");
+        int speed = scan.nextInt();
         System.out.println(name + ", " + color + ", " + speed);
     }
 }
