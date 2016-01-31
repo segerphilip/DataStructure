@@ -14,16 +14,16 @@ public class Dice {
                 i--;
             }
             else {
-                output.concat(value.toString()); //wrong method, fix this
+                output = output + " " + value; //wrong method, fix this
             }
         }
         return output;
     }
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner();
+        Scanner scan = new Scanner(System.in);
         System.out.println("How many rolls to perform?");
         int rolls = scan.nextInt();
-        System.out.println("You rolled " + roll(rolls);
+        System.out.println("You rolled " + roll(rolls));
     }
 }
