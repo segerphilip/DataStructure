@@ -1,0 +1,47 @@
+Test 1:
+INPUT:
+150
+OUTPUT:
+150
+1  $100 bills
+1  $50 bills
+0  $20 bills
+0  $10 bills
+0  $5 bills
+0  $1 bills
+0  quarters
+0  dimes
+0  nickels
+0  pennies
+
+Test 2:
+INPUT:
+267.13
+OUTPUT:
+267.13
+2  $100 bills
+1  $50 bills
+0  $20 bills
+1  $10 bills
+1  $5 bills
+2  $1 bills
+0  quarters
+1  dimes
+0  nickels
+3  pennies
+
+Test 3:
+INPUT:
+7482.31
+OUTPUT:
+7482.31
+74  $100 bills
+1  $50 bills
+1  $20 bills
+1  $10 bills
+0  $5 bills
+2  $1 bills
+1  quarters
+0  dimes
+1  nickels
+1  pennies

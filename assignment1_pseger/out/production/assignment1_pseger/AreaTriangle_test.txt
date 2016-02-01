@@ -1,0 +1,35 @@
+Test 1:
+INPUT:
+Please enter length of the first side of a triangle: 5.5
+Please enter length of the second side of a triangle: 3.7
+Please enter length of the third side of a triangle: 5.5
+OUTPUT:
+The triangle is isosceles.
+The area of the triangle is 9.582124960049308
+
+Test 2:
+INPUT:
+Please enter length of the first side of a triangle: 3
+Please enter length of the second side of a triangle: 4
+Please enter length of the third side of a triangle: 4
+OUTPUT:
+The triangle is isosceles.
+The area of the triangle is 5.562148865321747
+
+Test 3:
+INPUT:
+Please enter length of the first side of a triangle: 1
+Please enter length of the second side of a triangle: 1
+Please enter length of the third side of a triangle: 1
+OUTPUT:
+The triangle is isosceles.
+The area of the triangle is 0.4330127018922193
+
+Test 4:
+INPUT:
+Please enter length of the first side of a triangle: 3
+Please enter length of the second side of a triangle: 5
+Please enter length of the third side of a triangle: 6
+OUTPUT:
+The triangle is not isosceles.
+The area of the triangle is 7.483314773547883
