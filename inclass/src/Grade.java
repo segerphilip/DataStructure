@@ -21,6 +21,7 @@ public class Grade {
         if (this.score > g.getScore()) {
             return true;
         }
+        return false;
     }
 
 //    Returns a String representation of this grade
@@ -46,5 +47,7 @@ public class Grade {
 
         System.out.println(charlotte.isHigherThan(emily));
         System.out.println(Grade.max(charlotte, anne).toString());
+//        when called with just object, uses toString method to print properly
+        System.out.println(anne);
     }
 }
