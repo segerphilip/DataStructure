@@ -96,15 +96,8 @@ public class Animal {
     }
 
     public String toString() {
-      String word = "";
-      if (canFly) {
-        word = "can";
-      }
-      else {
-        word = "cannot";
-      }
       return (name + " is a " + type + " with " + number_legs + 
-              " legs that " + word + " fly and that says " + voice);
+              " legs that can" + (canFly ? "" : "not") + " fly and that says " + voice);
     }
     
     public static Animal readAndCreateAnimal() {
