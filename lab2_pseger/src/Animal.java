@@ -16,6 +16,10 @@ public class Animal {
         this.number_legs = number_legs;
     }
 
+    public String toString() {
+
+    }
+
 
     public static void main(String[] args) {
         Animal doggy = new Animal("dog", "Rover", "bark", false, 4);

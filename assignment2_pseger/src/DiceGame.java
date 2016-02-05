@@ -13,9 +13,9 @@ public class DiceGame {
   */
   
   String name; // Dave is the default
-  int numRounds; // 5 rounds by default
-  int pwin; //round wins of the player
-  int cwin; //round wins of the computer
+  private int numRounds; // 5 rounds by default
+  private int pwin; //round wins of the player
+  private int cwin; //round wins of the computer
 
   public DiceGame() {
 	// Your code here
@@ -97,11 +97,11 @@ public class DiceGame {
   public static void main (String args[]) {
     	
 	// Create an instance of a new game and play the rounds
-	DiceGame game = new DiceGame();
 	String name = (args.length >  0)? args[0] : "Dave";
 	
 	// 5 rounds by default
-	int numRounds = (args.length >  1)? Integer.parseInt(args[1]) : 5; 
+	int numRounds = (args.length >  1)? Integer.parseInt(args[1]) : 5;
+    DiceGame game = new DiceGame(name, numRounds);
 	game.playDiceGame(name, numRounds);
     
   }
