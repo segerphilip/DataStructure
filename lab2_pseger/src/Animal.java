@@ -113,9 +113,9 @@ public class Animal {
       System.out.println("How many legs does the animal have?");
       int number_legs = scan.nextInt();
       
-      Animal aNEW = new Animal(type, name, voice, canFly, number_legs);
+      Animal aNew = new Animal(type, name, voice, canFly, number_legs);
       
-      return aNEW;
+      return aNew;
     }
 
     public static void main(String[] args) {
@@ -162,6 +162,4 @@ public class Animal {
       System.out.println(a4);
       // ralph is a eagle with 4 legs that cannot fly that says
     }
-    
-    
 }
