@@ -4,9 +4,6 @@
     <list default="true" id="103dfd01-87ac-4e80-b3ca-e2cc2e38536d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../assignment2_pseger/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../assignment2_pseger/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../assignment2_pseger/src/DiceGame.java" afterPath="$PROJECT_DIR$/../assignment2_pseger/src/DiceGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../assignment2_pseger/src/DicePlayer.java" afterPath="$PROJECT_DIR$/../assignment2_pseger/src/DicePlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../assignment2_pseger/src/Point.java" afterPath="$PROJECT_DIR$/../assignment2_pseger/src/Point.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lab2_pseger.iws" />
     <ignored path=".idea/workspace.xml" />

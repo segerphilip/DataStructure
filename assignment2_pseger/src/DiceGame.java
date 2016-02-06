@@ -34,18 +34,6 @@ public class DiceGame {
   *							Note that this is actually the output parameter
   */
   private void accumulateValues(int[] input, int[] diceResults) {
-      int index = 0;
-//      for (int i = 0; i < input.length; i++) {
-//          for (int j = 0; j < diceResults.length; j++) {
-//              if (input[i] == diceResults[j]) {
-//                  diceResults[j] += 10; // adding 10 to a preexisting value to track count
-//              }
-//              else {
-//                  diceResults[index] = input[i];
-//                  index++;
-//              }
-//          }
-//      }
       for (int i = 0; i < diceResults.length; i++) {
           if (input[i] == 1) {
               diceResults[0]++;
@@ -66,7 +54,6 @@ public class DiceGame {
               diceResults[5]++;
           }
       }
-
   }
   
   /** Given an input array storing five dice values, 
@@ -79,14 +66,32 @@ public class DiceGame {
       int rank = 0;
       int[] diceResults = new int[input.length];
       accumulateValues(input, diceResults);
-	// Your code here
-      for (int i = 0; i < diceResults.length; i++) {
-          if (diceResults[i] >= 40) {
 
+      for (int i = 0; i < diceResults.length; i++) {
+          if (diceResults[i] == 5) {
+              rank = 6;
+          }
+          else if (diceResults[i] == 4) {
+              rank = 5;
+          }
+          else if (diceResults[i] == 3) {
+              for (int j = 0; j < diceResults.length; j++) {
+                  if (diceResults[j] == 2) {
+                      rank = 4;
+                  }
+              }
+              rank = 3;
+          }
+          else if (diceResults[i] == 2) {
+              for (int j = 0; j < diceResults.length; j++) {
+                  if (diceResults[j] == 2) {
+                      rank = 2;
+                  }
+              }
+              rank = 1;
           }
       }
-
-      return 0;
+      return rank;
   }
   
 
@@ -98,7 +103,19 @@ public class DiceGame {
   */
   private int playOneRound(String name) {
       DicePlayer hal = new DicePlayer();
-      int rank = getRank(hal.getValues());
+      DicePlayer dave = new DicePlayer();
+      int rank1 = getRank(hal.getValues());
+      int rank2 = getRank(dave.getValues());
+      if (rank1 > rank2) {
+          cwin += 1;
+      }
+      else if (rank1 == rank2) {
+
+      }
+      else {
+          pwin += 1;
+      }
+
       return rank;
   }
   
@@ -146,5 +163,4 @@ public class DiceGame {
 	game.playDiceGame(name, numRounds);
     
   }
-
 }

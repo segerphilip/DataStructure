@@ -4,8 +4,6 @@
     <list default="true" id="e48efa50-4712-4fc4-89bc-c1fc34f2302e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DiceGame.java" afterPath="$PROJECT_DIR$/src/DiceGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DicePlayer.java" afterPath="$PROJECT_DIR$/src/DicePlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Point.java" afterPath="$PROJECT_DIR$/src/Point.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab2_pseger/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../lab2_pseger/.idea/workspace.xml" />
     </list>
     <ignored path="assignment2_pseger.iws" />
@@ -31,8 +29,8 @@
       <file leaf-file-name="DiceGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DiceGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29288703">
-              <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+            <state vertical-scroll-proportion="2.4476988">
+              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -479,6 +477,13 @@
       <option name="number" value="Default" />
       <updated>1454533077070</updated>
     </task>
+    <task id="LOCAL-00001" summary="work in progress, maybe overwrite this">
+      <created>1454789304377</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1454789304378</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -519,6 +524,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="work in progress, maybe overwrite this" />
+    <option name="LAST_COMMIT_MESSAGE" value="work in progress, maybe overwrite this" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -747,8 +756,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DiceGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29288703">
-          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+        <state vertical-scroll-proportion="2.4476988">
+          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding />
         </state>
       </provider>
