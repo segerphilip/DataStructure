@@ -12,14 +12,14 @@ public class DiceGame {
   /** Creates a game object that contains the variables associated with a game.
   */
   
-  String name; // Dave is the default
+  private String name; // Dave is the default
   private int numRounds; // 5 rounds by default
   private int pwin; //round wins of the player
   private int cwin; //round wins of the computer
 
-  public DiceGame() {
-	// Your code here
-
+  public DiceGame(String name, int numRounds) {
+    this.name = name;
+    this.numRounds = numRounds;
   }
 	
 	
@@ -34,9 +34,39 @@ public class DiceGame {
   *							Note that this is actually the output parameter
   */
   private void accumulateValues(int[] input, int[] diceResults) {
-  
-	// Your code here
-	
+      int index = 0;
+//      for (int i = 0; i < input.length; i++) {
+//          for (int j = 0; j < diceResults.length; j++) {
+//              if (input[i] == diceResults[j]) {
+//                  diceResults[j] += 10; // adding 10 to a preexisting value to track count
+//              }
+//              else {
+//                  diceResults[index] = input[i];
+//                  index++;
+//              }
+//          }
+//      }
+      for (int i = 0; i < diceResults.length; i++) {
+          if (input[i] == 1) {
+              diceResults[0]++;
+          }
+          else if (input[i] == 2) {
+              diceResults[1]++;
+          }
+          else if (input[i] == 3) {
+              diceResults[2]++;
+          }
+          else if (input[i] == 4) {
+              diceResults[3]++;
+          }
+          else if (input[i] == 5) {
+              diceResults[4]++;
+          }
+          else if (input[i] == 6) {
+              diceResults[5]++;
+          }
+      }
+
   }
   
   /** Given an input array storing five dice values, 
@@ -45,8 +75,16 @@ public class DiceGame {
    * @return 			the rank: an integer between 0 and 6
    */
   private int getRank (int[] input) {
-	
+//	need a check for 0 values from input
+      int rank = 0;
+      int[] diceResults = new int[input.length];
+      accumulateValues(input, diceResults);
 	// Your code here
+      for (int i = 0; i < diceResults.length; i++) {
+          if (diceResults[i] >= 40) {
+
+          }
+      }
 
       return 0;
   }
@@ -59,11 +97,9 @@ public class DiceGame {
    * @return   0 if computer wins the round, 1 if player wins, 2 if a tie
   */
   private int playOneRound(String name) {
-  
-	// Your code here
-  
-	return 0;
-	
+      DicePlayer hal = new DicePlayer();
+      int rank = getRank(hal.getValues());
+      return rank;
   }
   
 
@@ -78,9 +114,14 @@ public class DiceGame {
     System.out.println("Good evening, " + name + ". Everything's running smoothly. And you?" + ".");
     System.out.println("I'm completely operational and all my circuits are functioning perfectly.");
 	System.out.println("Would you like to play a game of Dice Poker? I play very well.");
- 
-	// Your code here
-	
+
+      int curRound = 1;
+      for (int i = 0; i < numRounds; i++) {
+          System.out.println("*** Round " + curRound);
+          curRound +=1;
+          playOneRound(name);
+      }
+
     // After all rounds played, determine the final winner of the game and print the results
     if (pwin>cwin) System.out.print("The game was won by "+ name + " with a score of " + pwin + " to " + cwin);
     else if (cwin>pwin) System.out.print("The game was won by the HAL with a score of " + cwin + " to " + pwin);

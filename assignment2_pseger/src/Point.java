@@ -26,9 +26,9 @@ public class Point {
         y = val;
     }
 
-    public void findDistance(Point ) {
-
-    }
+//    public void findDistance(Point ) {
+//
+//    }
 
     public String toString() {
         return "";

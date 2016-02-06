@@ -25,8 +25,8 @@ private int[] player = new int[hand];
     */
 	public String toString()  {
 	    String s = "";
-        for (int i = 0; i < this.player.length; i++) {
-            s.concat(Integer.toString(this.player[i]));
+        for (int i = 0; i < player.length; i++) {
+            s = s + (Integer.toString(player[i])) + " ";
         }
 	    return  s;
 	}
@@ -35,12 +35,10 @@ private int[] player = new int[hand];
      * @return integer array of @param hand values corresponding to dice
     */
     public int[] getValues() {
-        int [] values = new int[hand];
-        for (int i = 0; i < this.player.length; i++) {
-            values[i] = this.player[i];
-//            System.out.println(values[i]);
+        int[] values = new int[hand];
+        for (int i = 0; i < player.length; i++) {
+            values[i] = player[i];
         }
-        System.out.println(values.toString());
         return values;
     }
 
@@ -54,6 +52,6 @@ private int[] player = new int[hand];
 	DicePlayer dave = new DicePlayer();
 	System.out.println("Dave rolled " + dave);
 
-	
+    System.out.println(hal.getValues());
   }
 }
