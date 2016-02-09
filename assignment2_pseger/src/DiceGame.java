@@ -34,7 +34,7 @@ public class DiceGame {
   *							Note that this is actually the output parameter
   */
   private void accumulateValues(int[] input, int[] diceResults) {
-      for (int i = 0; i < diceResults.length; i++) {
+      for (int i = 0; i < diceResults.length - 1; i++) {
           if (input[i] == 1) {
               diceResults[0]++;
           }
@@ -62,11 +62,12 @@ public class DiceGame {
    * @return 			the rank: an integer between 0 and 6
    */
   private int getRank (int[] input) {
-//	need a check for 0 values from input
       int rank = 0;
-      int[] diceResults = new int[input.length];
+      int[] diceResults = new int[input.length + 1];
+      for (int i = 0; i < input.length; i++) {
+          diceResults[i] = input[i];
+      }
       accumulateValues(input, diceResults);
-
       for (int i = 0; i < diceResults.length; i++) {
           if (diceResults[i] == 5) {
               rank = 6;
@@ -102,15 +103,20 @@ public class DiceGame {
    * @return   0 if computer wins the round, 1 if player wins, 2 if a tie
   */
   private int playOneRound(String name) {
+      int rank = 0;
       DicePlayer hal = new DicePlayer();
       DicePlayer dave = new DicePlayer();
       int rank1 = getRank(hal.getValues());
       int rank2 = getRank(dave.getValues());
+
+      System.out.println("HAL: " + hal.toString() + " Rank: " + rank1);
+      System.out.println(name + ": " + dave.toString() + " Rank: " + rank2);
+
       if (rank1 > rank2) {
           cwin += 1;
       }
       else if (rank1 == rank2) {
-
+          rank = rank1;
       }
       else {
           pwin += 1;
@@ -132,10 +138,8 @@ public class DiceGame {
     System.out.println("I'm completely operational and all my circuits are functioning perfectly.");
 	System.out.println("Would you like to play a game of Dice Poker? I play very well.");
 
-      int curRound = 1;
-      for (int i = 0; i < numRounds; i++) {
-          System.out.println("*** Round " + curRound);
-          curRound +=1;
+      for (int i = 1; i < numRounds + 1; i++) {
+          System.out.println("\n*** Round " + i);
           playOneRound(name);
       }
 

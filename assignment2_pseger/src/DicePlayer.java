@@ -52,6 +52,6 @@ private int[] player = new int[hand];
 	DicePlayer dave = new DicePlayer();
 	System.out.println("Dave rolled " + dave);
 
-    System.out.println(hal.getValues());
+    System.out.println(hal.toString());
   }
 }
