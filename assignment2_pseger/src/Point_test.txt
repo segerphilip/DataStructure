@@ -1,0 +1,15 @@
+Input:
+1 1 1 1 1 1 (spaced properly, I'm just saving space)
+Output:
+Yes, there is equadistance
+(Note, we never check if they are literally the same point)
+
+Input:
+1 2 2 1 5 6
+Output:
+Nope
+
+Input:
+1 2 2 3 1 2
+Output:
+Yes, there is equadistance
