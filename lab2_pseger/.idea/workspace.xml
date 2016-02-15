@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="103dfd01-87ac-4e80-b3ca-e2cc2e38536d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../assignment2_pseger/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../assignment2_pseger/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../assignment2_pseger/src/DiceGame.java" afterPath="$PROJECT_DIR$/../assignment2_pseger/src/DiceGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../assignment2_pseger/src/DicePlayer.java" afterPath="$PROJECT_DIR$/../assignment2_pseger/src/DicePlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../inclass/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../inclass/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assignment3_pseger/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assignment3_pseger/src/Account.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assignment3_pseger/src/CheckingAccount.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assignment3_pseger/src/SavingsAccount.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assignment3_pseger/src/School.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assignment3_pseger/src/Sort.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assignment3_pseger/src/StringOps.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../lab3_pseger/src/Isosceles.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab3_pseger/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../lab3_pseger/.idea/workspace.xml" />
     </list>
     <ignored path="lab2_pseger.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +36,8 @@
       <file leaf-file-name="BankAccount.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BankAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31380752">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.27336124">
+              <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -96,9 +101,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -133,6 +135,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -556,6 +561,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/BankAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Animal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -607,8 +622,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BankAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31380752">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.27336124">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
