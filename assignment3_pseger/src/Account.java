@@ -24,6 +24,10 @@ public abstract class Account {
         return accountNum;
     }
 
+    public void setAccountBal(double val) {
+        accountBal = val;
+    }
+
     public static int generateAccountNumber() {
         Random rand = new Random();
         int number = 10000 + rand.nextInt(89999);
@@ -31,12 +35,13 @@ public abstract class Account {
     }
 
     public String toString() {
-        return "Account " + getAccountNum() + " with balance of " +
-                getAccountBal();
+        return "Account: " + accountNum + "\nBalance: " +
+                accountBal;
     }
 
     public abstract void makeWithdrawl(double sum);
 
+//    testing for account
     public static void main(String[] args) {
         int test = generateAccountNumber();
         System.out.println(test);

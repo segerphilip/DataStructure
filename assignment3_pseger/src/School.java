@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Created by philip on 2/15/16.
+ * Created by Jason and Philip on 2/15/16.
  */
 public class School {
     private String name;
@@ -50,6 +50,18 @@ public class School {
         this.publications = publications;
     }
 
+    public int getRating() {
+        return rating;
+    }
+
+    public int getRank() {
+        return rank;
+    }
+
+    public void setRank(int rank) {
+        this.rank = rank;
+    }
+
     public void computeRating(int w1, int w2, int w3) {
         rating = w1 * academics + w2 * research + w3 * publications;
     }
@@ -64,12 +76,13 @@ public class School {
     }
 
     public static void main(String[] args) {
-        
-//        if (args.length != 3) {
-//            System.out.println("Please provide 3 weights (1..5) for Academics, Research, and Publications");
-//        }
-//        else {
-////            call computeRating
-//        }
+        School sc1 = new School("MIT", 10, 10, 7);
+        System.out.println(sc1);
+        sc1.computeRating(3, 5, 4);
+        System.out.println(sc1);
+
+        School sc2 = new School("Stanford", 8, 10, 9);
+        sc2.computeRating(7, 3, 5);
+        System.out.println(sc2);
     }
 }
