@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /**
- * Created by philip and eliza on 2/18/16.
+ * Created by philip and eliza on 2/19/16.
  */
 public class Count {
     private String word;
