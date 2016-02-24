@@ -1,0 +1,7 @@
+http://www.bing.com/
+https://www.google.com/?gws_rd=ssl
+http://www.netflix.com/browse
+http://www.cnn.com/
+http://www.wellesley.edu/
+http://www.horoscope.com/us/index.aspx
+http://www.noaa.gov/
