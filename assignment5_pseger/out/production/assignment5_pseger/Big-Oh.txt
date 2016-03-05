@@ -1,0 +1,35 @@
+// Q1: What is the running time of the whole getTitle() method in big-O notation
+public String getTitle() {
+   return title;  // Q2: What is the running time of this statement in big-O notation?
+}
+
+Q1: O(1) because there is a single statement without loops and recursion, so it takes very little time.
+Q2: O(1) because the return statement returns a specific variable's value. There is no recursion or other method calls.
+
+
+
+// Q3: What is the running time of the whole removeCD() method in big-O notation
+
+public boolean removeCD(String title) {
+   boolean found = false;      // Q4: Give the big-O notation of this statement
+   int cd = 0;
+   while (cd < count)          // Q5: Give the big-O notation of this statement
+   {                           // Q6: Give the big-O notation of the line below
+      if (title.equals( (collection[cd]).getTitle() ) && !found)
+      {      // CD was found. Now remove by replacing it by the last one
+         collection[cd] = collection[count-1];     // Q7: Give the big-O notation of this statement
+         count--;
+         found = true;
+      }
+      cd++;         // Q8: Give the big-O notation of this statement
+   }
+   return found;    // Q9: Give the big-O notation of this statement
+}
+
+Q3: O(n) time because a while loop means we have to go through each CD in the collection, which will take n time.
+Q4: O(1) because just assigning a variable.
+Q5: O(n) because we loop through for each value of CD, so n values.
+Q6: O(1) because it requires a function call, but that takes O(1) from previous and .equals is also a function call of O(1).
+Q7: O(1) because just replacing with the last value, not actually creating a new collection or anything.
+Q8: O(1) because it is equivalent to the statement `cd = cd + 1;` which is a variable assignment and takes O(1) time.
+Q9: O(1) because it is returning a variable value, either true or false.

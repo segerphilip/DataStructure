@@ -23,10 +23,16 @@ public class LinkedStack<T> implements Stack<T> {
     }
 
     //-----------------------------------------------------------------
-    //  Adds an element elm at the top of the stack.
+    //  Adds an element elm at the top of the stack. Does this by
+    //  first saving the old top element, creating the new top,
+    //  and pointing the reference of the new top to the old top.
     //-----------------------------------------------------------------
     public void push(T elm) {
-
+        LinearNode oldFirst = top;
+        top = new LinearNode<T>();
+        top.setElement(elm);
+        top.setNext(oldFirst);
+        count++;
     }
 
     //-----------------------------------------------------------------
@@ -52,7 +58,10 @@ public class LinkedStack<T> implements Stack<T> {
     //  elements.
     //-----------------------------------------------------------------
     public T peek () throws EmptyCollectionException {
-
+        if (count == 0) {
+            throw new EmptyCollectionException("There is nothing in the collection");
+        }
+        return top.getElement();
     }
 
     //-----------------------------------------------------------------
@@ -82,12 +91,5 @@ public class LinkedStack<T> implements Stack<T> {
         }
 
         return result + "<bottom of stack>";
-    }
-
-    //-----------------------------------------------------------------
-    //  Testing method for stack implementation.
-    //-----------------------------------------------------------------
-    public static void main(String[] args) {
-
     }
 }
