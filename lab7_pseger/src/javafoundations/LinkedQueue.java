@@ -80,7 +80,7 @@ public class LinkedQueue<T> implements Queue<T> {
         String result = "<front of queue\n";
         LinearNode pointer = front;
 
-        while (pointer.getNext() != null) {
+        while (pointer != null) {
             result += pointer.getElement() + "\n";
             pointer = pointer.getNext();
         }
