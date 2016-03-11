@@ -37,36 +37,69 @@ public class LinkedQueue<T> implements Queue<T> {
     }
 
     //-----------------------------------------------------------------
-    //  The following methods are left as Programming Projects.
+    //  Removes an element from the front of the queue.
     //-----------------------------------------------------------------
     public T dequeue() throws EmptyCollectionException {
-
+        if (count == 0) {
+            throw new EmptyCollectionException("No elements in the queue");
+        }
+        T temp = front.getElement();
+        front = front.getNext();
+        count--;
+        return temp;
     }
 
+    //-----------------------------------------------------------------
+    //  Returns the first element in the queue.
+    //-----------------------------------------------------------------
     public T first() throws EmptyCollectionException {
-
+        if (count == 0) {
+            throw new EmptyCollectionException("No elements in the queue");
+        }
+        return front.getElement();
     }
 
-
+    //-----------------------------------------------------------------
+    //  Returns true if the queue is empty.
+    //-----------------------------------------------------------------
     public boolean isEmpty() {
         return count == 0;
     }
 
+    //-----------------------------------------------------------------
+    //  Returns the size of the queue.
+    //-----------------------------------------------------------------
     public int size() {
         return count;
     }
 
+    //-----------------------------------------------------------------
+    //  Prints out the contents of the queue in a reasonable format.
+    //-----------------------------------------------------------------
     public String toString() {
-        String result = "<top of stack>\n";
+        String result = "<front of queue\n";
+        LinearNode pointer = front;
 
-        for (int i = )
-            result += array[index] + "\n";
+        while (pointer.getNext() != null) {
+            result += pointer.getElement() + "\n";
+            pointer = pointer.getNext();
+        }
 
-        return result + "<bottom of stack>";
+        return result + "<rear of queue>";
     }
 
+    //-----------------------------------------------------------------
+    //  Main method used for testing.
+    //-----------------------------------------------------------------
     public static void main(String[] args) {
-
+        LinkedQueue<String> lq1 = new LinkedQueue<String>();
+        lq1.enqueue("Test");
+        lq1.enqueue("New");
+        lq1.enqueue("Final");
+        System.out.println(lq1);
+        System.out.println(lq1.first());
+        System.out.println(lq1.dequeue());
+        System.out.println(lq1);
     }
 
 }
