@@ -89,17 +89,10 @@ public class LinkedQueue<T> implements Queue<T> {
     }
 
     //-----------------------------------------------------------------
-    //  Main method used for testing.
+    //  Main method used for testing, moved to driver class.
     //-----------------------------------------------------------------
     public static void main(String[] args) {
-        LinkedQueue<String> lq1 = new LinkedQueue<String>();
-        lq1.enqueue("Test");
-        lq1.enqueue("New");
-        lq1.enqueue("Final");
-        System.out.println(lq1);
-        System.out.println(lq1.first());
-        System.out.println(lq1.dequeue());
-        System.out.println(lq1);
+
     }
 
 }
