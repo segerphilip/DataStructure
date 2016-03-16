@@ -15,6 +15,7 @@ public class Polynomial {
 
     /**
      * Constructor that takes q and sets it to the global queue var
+     *
      * @param q
      */
     public Polynomial(ArrayQueue<Term> q) {
@@ -23,6 +24,7 @@ public class Polynomial {
 
     /**
      * Returns the queue (used to help compare two queues)
+     *
      * @return
      */
     public ArrayQueue<Term> getQueue() {
@@ -31,6 +33,7 @@ public class Polynomial {
 
     /**
      * Adds a Term t to the queue in sorted order
+     *
      * @param t
      */
     public void addTerm(Term t) {
@@ -49,8 +52,7 @@ public class Polynomial {
 //                enqueue the new term (addition of t and queue)
                 tempQ.enqueue(new Term(one + two, xpon));
                 t = null;
-            }
-            else {
+            } else {
                 tempQ.enqueue(t);
                 t = null;
                 tempQ.enqueue(queue.dequeue());
@@ -68,6 +70,7 @@ public class Polynomial {
     /**
      * Taken the queue we are working with, and input polynomial p, add the two together
      * and return the result.
+     *
      * @param p
      * @return
      */
@@ -116,6 +119,7 @@ public class Polynomial {
 
     /**
      * Prints out the polynomial, using the Term print method for formatting
+     *
      * @return
      */
     public String toString() {
@@ -133,8 +137,7 @@ public class Polynomial {
             else if (queue.first().getCoefficient() < 0) {
                 result += queue.first().toString();
                 tempQ.enqueue(queue.dequeue());
-            }
-            else {
+            } else {
                 result += "+" + queue.first().toString();
                 tempQ.enqueue(queue.dequeue());
             }

@@ -38,16 +38,17 @@ public class PolynomialDriver {
     }
 
     public static String getInput() {
-        Scanner scan = new Scanner(System.in).useDelimiter("\\s*x\\^\\+\\s*");;
+        Scanner scan = new Scanner(System.in).useDelimiter("\\s*x\\^\\+\\s*");
+        ;
         System.out.println("Please input a polynomial\n(example: 2x^2 + 3x + 1)");
         String polynomial = scan.nextLine();
-        polynomial = polynomial.replaceAll("\\s+","");
+        polynomial = polynomial.replaceAll("\\s+", "");
         return polynomial;
     }
 
     public static Term[] filterInput(String input) {
         int coeff = 0,
-            expon = 0;
+                expon = 0;
 
 //        I am not making expanding code for this, mainly because
 //        it has been done before and this is for testing
@@ -62,13 +63,11 @@ public class PolynomialDriver {
                 try {
                     if (coeff == 0) {
                         coeff = at;
-                    }
-                    else {
+                    } else {
                         expon = at;
                     }
-                }
-                catch (InputMismatchException exception) {
-                    System.out.println ("That is not a supported character");
+                } catch (InputMismatchException exception) {
+                    System.out.println("That is not a supported character");
                 }
             }
 
@@ -88,8 +87,7 @@ public class PolynomialDriver {
         for (int i = 0; i < terms.length; i++) {
             try {
                 pl1.addTerm(terms[i]);
-            }
-            catch (NullPointerException exception) {
+            } catch (NullPointerException exception) {
                 System.out.println("invalid: " + exception);
             }
         }
