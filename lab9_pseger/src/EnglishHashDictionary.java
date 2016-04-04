@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.Hashtable;
+import java.util.Scanner;
 
 /**
  * Created by philip on 4/4/16.
@@ -19,23 +20,16 @@ public class EnglishHashDictionary implements Dictionary {
      * @param words
      */
     public EnglishHashDictionary(String words) {
-        BufferedReader br = null;
-        try {
-            br = new BufferedReader(new FileReader(words));
-        } catch (FileNotFoundException e) {
-            System.out.println("Unable to read the file");
-        }
+        phrasing = new Hashtable<String, Integer>();
 
         try {
-//            read each line from the text file and add to hashmap
-            String line = "";
-            while ((line = br.readLine()) != null) {
-                phrasing.put(line, 1);
+            Scanner scan = new Scanner(new File(words));
+            while (scan.hasNext()) {
+                phrasing.put(scan.next().trim().toLowerCase(), 1);
             }
-            br.close();
-
+            scan.close();
         } catch (IOException exception) {
-            System.out.println("Unable to read file, error:\n" + exception);
+            System.out.println("Unable to open file");
         }
     }
 
