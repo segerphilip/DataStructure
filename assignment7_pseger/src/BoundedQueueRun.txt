@@ -1,0 +1,7 @@
+/Library/Java/JavaVirtualMachines/0_65.jdk/...
+test new
+Queue is already full
+wee new
+Queue is already full
+
+Process finished with exit code 0
