@@ -1,16 +1,35 @@
 Task 1a:
 1. true
-2. false
-3.
-4. true
-5.
+2. true
+3. true
+4. true, but sort of depends. For smaller values of n, n^20 will be greater, but for larger values of n 2^n will be greater.
+5. true, but depends on size of n. For smaller values of n, n^2 will be greater, but for larger values of n n^2logn will be greater.
 
 Task 1b:
 a.
-
+    Be (somewhat) lazy. If you need to do a certain action to some variable multiple times the exact same way each time, make a function for it so you won't need to repeatedly write it. This also applies to variables. Make a variable for statements you use repeatedly to make life easy. Make sure they are named reasonably though, and you comment exactly what they are for, otherwise you can cause excess confusion.
+    Another thing to watch out for is poorly thought out code. Spend the time before jumping into a project to think about what inheritance may be needed, where complex math may be involved (and solve the math away from a computer), and other such issues. Plan out what should do what, then when you have a plan, start writing code. Make sure you follow the plan, or document any changes to it as you go so you don't get confused.
 b.
+    Right from the first assignment, CorrectChange.java, you can implement using methods without repeating what you did multiple times. I have since been practicing this in every project, including this exam. Check cloneFirstHalf in the Deck.java file, as it simplified my life and implementation of perfectShuffle.
+    The second point I learned from assignment 2 in the DiceGame.java file. We did not fully think out our plan, so our code was messy and did not always act as expected. I am trying to think about what I am working on more concretely, and this exam is another example (I have a couple pages of notes in my notebook for organization). The final project in this course will also require a lot of planning.
 
 Task 1c:
+public void listenAudio() throws UnsupportedAudioFileException {
+  // content
+}
 
+// Handling with a try/catch:
+
+public void listenAudio() {
+  try {
+    // content
+  }
+  catch (UnsupportedAudioFileException exception) {
+    System.out.println("Unable to play file" + exception);
+  }
+}
 
 Task 1d:
+Compiler is complaining that AdaLovelace imported the javafoundations package, however it is unable to find it.
+One solution is to set the classpath: "CLASSPATH=/User/Shared/:."  "export CLASSPATH"
+Another solution is to compile when you run: "javac -cp /User/Shared/:. PalindromeChecker.java"  "java -cp /User/Shared/:. PalindromeChecker"

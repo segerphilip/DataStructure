@@ -1,0 +1,17 @@
+Task 1a:
+1. true
+2. true
+3. true
+4. true, but sort of depends. For smaller values of n, n^20 will be greater, but for larger values of n 2^n will be greater.
+5. true, but depends on size of n. For smaller values of n, n^2 will be greater, but for larger values of n n^2logn will be greater.
+
+Task 1b:
+a.
+    Be (somewhat) lazy. If you need to do a certain action to some variable multiple times the exact same way each time, make a function for it so you won't need to repeatedly write it. This also applies to variables. Make a variable for statements you use repeatedly to make life easy. Make sure they are named reasonably though, and you comment exactly what they are for, otherwise you can cause excess confusion.
+
+b.
+
+Task 1c:
+
+
+Task 1d:
