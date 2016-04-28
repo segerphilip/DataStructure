@@ -92,8 +92,7 @@ public class AdjMatGraph<T> {
                     return i;
                 }
             }
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             System.out.println("No value found");
             return -1;
         }
@@ -105,15 +104,15 @@ public class AdjMatGraph<T> {
      */
     private void expandCapacity() {
 //        expand vertices
-        T[] tempV = (T[])new Object[vertices.length + 10];
-        for (int i = 1; i <= n; i++){
+        T[] tempV = (T[]) new Object[vertices.length + 10];
+        for (int i = 1; i <= n; i++) {
             tempV[i] = vertices[i];
         }
         vertices = tempV;
 
 //        expand arcs
-        int [][]tempA = new int[arcs.length + 10][arcs.length + 10];
-        for (int i = 0; i < arcs.length; i++){
+        int[][] tempA = new int[arcs.length + 10][arcs.length + 10];
+        for (int i = 0; i < arcs.length; i++) {
             for (int j = 0; j < arcs.length; j++) {
                 tempA[i][j] = arcs[i][j];
             }
@@ -141,20 +140,22 @@ public class AdjMatGraph<T> {
         return ((isArc(vertex1, vertex2) && isArc(vertex2, vertex1)));
     }
 
-    /** Returns true IFF the graph is undirected, that is, for every
+    /**
+     * Returns true IFF the graph is undirected, that is, for every
      * pair of nodes i,j for which there is an arc, the opposite arc
-     * is also present in the graph.  */
-   public boolean isUndirected() {
-       for (int i = 1; i <= n; i++){
-           for (int j = 1; j <= n; j++){
-               if (i != j) {
-                   if (arcs[i][j] != arcs[j][i])
-                       return false;
-               }
-           }
-       }
-       return true;
-   }
+     * is also present in the graph.
+     */
+    public boolean isUndirected() {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (i != j) {
+                    if (arcs[i][j] != arcs[j][i])
+                        return false;
+                }
+            }
+        }
+        return true;
+    }
 
     /**
      * Adds a vertex to this graph, associating object with vertex.
@@ -178,7 +179,7 @@ public class AdjMatGraph<T> {
      */
     public void removeVertex(T vertex) {
         if (getVal(vertex) != 0) {
-            for(int i = getVal(vertex); i <= n; i++) {
+            for (int i = getVal(vertex); i <= n; i++) {
                 vertices[i] = vertices[i + 1];
             }
             n--;

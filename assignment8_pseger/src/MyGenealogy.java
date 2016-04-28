@@ -38,5 +38,8 @@ public class MyGenealogy {
         System.out.println("P's mother is: " + gt1.getMater("P"));
         System.out.println("P and B are in-laws: " + gt1.inLaws("P", "B"));
         System.out.println("P and E are in-laws: " + gt1.inLaws("P", "E"));
+        while (gt1.iterator().hasNext()) {
+            System.out.println(gt1.iterator().next());
+        }
     }
 }

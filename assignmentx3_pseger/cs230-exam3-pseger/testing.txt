@@ -1,0 +1,150 @@
+philip:Code$ java Exam3Testing
+
+*****************************************************
+INITIAL TESTING OF WORKING FUNCTIONS
+*****************************************************
+
+ORIGINAL
+
+i B C D E F 
+B - 1 - - - 
+C 1 - 1 - - 
+D - 1 - - - 
+E - - - - - 
+F - - - - - 
+
+CLONED
+
+i B C D E F 
+B - 1 - - - 
+C 1 - 1 - - 
+D - 1 - - - 
+E - - - - - 
+F - - - - - 
+
+All the sinks: [E, F]
+All the sources: [E, F]
+
+B is a source false
+C is a source false
+D is a source false
+E is a source true
+
+B is a sink false
+C is a sink false
+D is a sink false
+E is a sink true
+
+B is isolated false
+C is isolated false
+D is isolated false
+E is isolated true
+
+Yep, those checks make sense and pass.
+
+*****************************************************
+TESTING OF WORKING FUNCTIONS and TGF
+*****************************************************
+
+ORIGINAL
+
+i A B C D E F G 
+A - - 1 1 1 - - 
+B 1 - 1 - - - - 
+C 1 - - 1 - - - 
+D - 1 1 - - - - 
+E - - - - - - - 
+F 1 - - - - - - 
+G - - - - - - - 
+
+CLONED
+
+i A B C D E F G 
+A - - 1 1 1 - - 
+B 1 - 1 - - - - 
+C 1 - - 1 - - - 
+D - 1 1 - - - - 
+E - - - - - - - 
+F 1 - - - - - - 
+G - - - - - - - 
+
+All the sinks: [E, G]
+All the sources: [F, G]
+
+B is a source false
+C is a source false
+D is a source false
+E is a source false
+F is a source true
+G is a source true
+
+B is a sink false
+C is a sink false
+D is a sink false
+E is a sink true
+F is a sink false
+G is a sink true
+
+B is isolated false
+C is isolated false
+D is isolated false
+E is isolated false
+F is isolated false
+G is isolated true
+
+Yep, those checks make sense and pass as well.
+
+*****************************************************
+
+************* Sample Testing for Exam 3 *************
+*****************************************************
+Notation: (expected result: )  [actual result]
+
+
+i B C D E F 
+B - 1 - - - 
+C 1 - 1 - - 
+D - 1 - - - 
+E - - - - - 
+F - - - - - 
+
+
+*** Testing DFS and BFS ***
+DFS from B [B,C,D]  : [D, B, C, B]
+DFS from F     [F]  : [F]
+BFS from B [B,C,D]  : [B]
+BFS from F     [F]  : [F]
+
+*** Testing clone() ***
+CLONED GRAPH (diamond): 
+
+i B C D E F 
+B - 1 - - - 
+C 1 - 1 - - 
+D - 1 - - - 
+E - - - - - 
+F - - - - - 
+
+
+************* tests on the CS-COURSES graph **************
+CS graph in DFS: 
+(CS111, CS230, CS232, CS231, CS235, CS251, CS242, CS315, CS240):
+[CS240, CS315, CS242, CS251, CS235, CS231, CS232, CS230, CS111]
+
+CS graph in BFS: 
+(CS111, CS230, CS240, CS232, CS231, CS235, CS251, CS242, CS315):
+[CS111]
+
+CS-courses with no pre-requisites : 
+(MATH225, CS110, CS114, CS111):
+[MATH225, CS110, CS114, CS111]
+
+No followup courses:      
+(CS232, CS231, CS240, CS251, CS242, CS315):
+[CS232, CS231, CS240, CS251, CS242, CS315]
+
+--------> ONE WAY to satisfy pre-req:
+(MATH225, CS110, CS114, CS215, CS111, CS230, CS232, CS231, CS235, CS240, CS251, CS242, CS315):
+UNIMPLEMENTED
+
+SAMPLE TESTING COMPLETE
